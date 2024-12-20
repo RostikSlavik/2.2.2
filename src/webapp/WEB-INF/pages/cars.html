@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+  <title>Cars</title>
+</head>
+<body>
+<h1>Car List</h1>
+<table class = "table table-inverse">
+  <thead>
+  <tr>
+    <th>Model</th>
+    <th>Price</th>
+    <th>Year</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="car : ${cars}">
+    <td th:text="${car.getModel()}"></td>
+    <td th:text="${car.getPrice()}"></td>
+    <td th:text="${car.getYear()}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
